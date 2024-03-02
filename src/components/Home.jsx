@@ -6,7 +6,7 @@ function Home() {
   return (
     <div className="hero">
       <div className="card text-bg-transperent"> 
-        <img src="/assets/banner.jpg" className="card-img" alt="" height="550px"/> 
+        <img src="https://wallpaperaccess.com/full/2593108.png" className="card-img" alt="" height="550px"/> 
         <div className="card-img-overlay d-flex flex-column"> 
           <div className="container">
             <h5
