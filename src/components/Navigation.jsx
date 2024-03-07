@@ -8,9 +8,9 @@ function Navigation() {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm">
         <div className="container">
-          <a className="navbar-brand fw-bold fs-4" href="/">
+          <Link className="navbar-brand fw-bold fs-4" to="/">
           <i className="fa fa-shopping-bag me-1"></i> EasyShop
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
