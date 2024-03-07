@@ -2,7 +2,7 @@ import React from "react";
 import Navigation from "./components/Navigation";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, RouterProvider, Routes, createBrowserRouter } from "react-router-dom";
 import Products from "./components/Products";
 import SingleProduct from "./components/SingleProduct";
 import Cart from "./components/Cart";
@@ -42,10 +42,24 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <Navigation />
+    
+    <BrowserRouter>
+    <Navigation />
+    <Routes>
+      <Route path="/" element = {<Home />}/>
+      <Route path="/EasyShop" element = {<Home />}/>
+      <Route path="/products" element = {<Products />}/>
+      <Route path="/products/:id" element = {<SingleProduct />}/>
+      <Route path="/cart" element = {<Cart />}/>
+      <Route path="/about" element = {<About />}/>
+      <Route path="/contact" element = {<Contact />}/>
+
+    </Routes>
+    </BrowserRouter>
+      {/* <Navigation />
       <RouterProvider router={router}>
         <Home />
-      </RouterProvider>
+      </RouterProvider> */}
     </>
   );
 }
