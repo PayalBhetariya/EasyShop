@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/EasyShop/static/css/main.4d11d6cb.css",
-    "main.js": "/EasyShop/static/js/main.e659f3db.js",
+    "main.js": "/EasyShop/static/js/main.ba9d9532.js",
     "static/js/453.f6199abb.chunk.js": "/EasyShop/static/js/453.f6199abb.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/EasyShop/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/fontawesome-webfont.eot": "/EasyShop/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
@@ -10,11 +10,11 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/EasyShop/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/EasyShop/index.html",
     "main.4d11d6cb.css.map": "/EasyShop/static/css/main.4d11d6cb.css.map",
-    "main.e659f3db.js.map": "/EasyShop/static/js/main.e659f3db.js.map",
+    "main.ba9d9532.js.map": "/EasyShop/static/js/main.ba9d9532.js.map",
     "453.f6199abb.chunk.js.map": "/EasyShop/static/js/453.f6199abb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4d11d6cb.css",
-    "static/js/main.e659f3db.js"
+    "static/js/main.ba9d9532.js"
   ]
 }
