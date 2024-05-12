@@ -3,6 +3,7 @@ import Skeleton from "react-loading-skeleton";
 import { NavLink } from "react-router-dom";
 
 function Products() {
+  // debugger
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -11,20 +12,39 @@ function Products() {
   useEffect(() => {
     async function getProducts() {
       setLoading(true);
+      try{
       const response = await fetch("https://fakestoreapi.com/products");
-      if (componentMounted.current) {
+      // if (componentMounted.current) {
         const responseData = await response.json();
         setData(responseData);
         setFilter(responseData);
         setLoading(false);
         console.log("data is", filter);
-      }
+      // }
+    }catch (error) {
+      console.error("Error fetching data:", error);
+    }
+    }
+    getProducts();
       return () => {
         componentMounted.current = false;
       };
-    }
-    getProducts();
+   
+    // getProducts();
   }, []);
+  const filterProduct = (cat) => {
+    const updatedList = data.filter((x) => x.category === cat);
+    setFilter(updatedList);
+  };
+  // const filterProduct = (cat) => {
+  //   if (cat === "All") {
+  //     setFilter(data);
+  //   } else {
+  //     const updatedList = data.filter((x) => x.category === cat);
+  //     setFilter(updatedList);
+  //   }
+  // };
+  
   const Loading = () => {
     return (
       <>
@@ -43,10 +63,7 @@ function Products() {
       </>
     );
   };
-  const filterProduct = (cat) => {
-    const updatedList = data.filter((x) => x.category === cat);
-    setFilter(updatedList);
-  };
+  
   const ShowProducts = () => {
     return (
       <>
@@ -121,6 +138,7 @@ function Products() {
           </div>
         </div>
         <div className="row justify-content-center">
+          
           {loading ? <Loading /> : <ShowProducts />}
         </div>
       </div>
